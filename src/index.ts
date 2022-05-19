@@ -4,6 +4,7 @@ import express from 'express';
 import type { Request, Response } from 'express';
 
 const app = express();
+const port = process.env.PORT || 3030;
 
 // async function dbConnect() {
 //   try {
@@ -21,4 +22,4 @@ function onServerStart() {
 
 const ping = (req: Request, res: Response) => res.status(200).send('pong');
 
-app.use(express.json()).use('/ping', ping).listen(9090, onServerStart);
+app.use(express.json()).use('/ping', ping).listen(port, onServerStart);
