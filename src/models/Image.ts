@@ -5,6 +5,8 @@ type imageType = {
   creteAt: Date;
 };
 
+// схема для mongoose структура как должно хранится в монго и типы данных и дефолтные значения
+
 const imageSchema = new Schema<imageType>({
   url: {
     type: String,

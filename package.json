@@ -4,12 +4,8 @@
   "license": "no-license",
   "private": true,
   "scripts": {
-    "lint": "eslint -c .eslintrc --ext .tsx --ext .ts ./src/",
-    "prebuild": "echo --- tslint -c tslint.json -p tsconfig.json --fix",
-    "build": "rimraf build && tsc",
-    "prestart": "npm run build",
-    "start": "node ./dist",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "ts-node ./src/index.ts",
+    "lint": "eslint -c .eslintrc --ext .tsx --ext .ts ./src/"
   },
   "dependencies": {
     "express": "^4.17.2",
